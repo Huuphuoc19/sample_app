@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   get 'password_resets/new'
 
   get 'password_resets/edit'
@@ -21,5 +20,7 @@ Rails.application.routes.draw do
 
   #respet pass
   resources :password_resets,     only: [:new, :create, :edit, :update]
+  #post
+  resources :microposts,          only: [:create, :destroy, :index]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
